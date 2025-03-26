@@ -67,9 +67,9 @@ export const translations: Record<Language, Translations> = {
           '4': 'Interaction Design',
           '5': 'Usability Testing'
         }
-      },
-      consulting: {
-        title: 'IT Consulting',
+        },
+        consulting: {
+          title: 'IT Consulting',
         description: 'Expert guidance for your digital transformation',
         features: {
           '1': 'Technology Stack Selection',
@@ -138,8 +138,20 @@ export const translations: Record<Language, Translations> = {
     // Контакты
     contact: {
       title: 'Let\'s Work Together',
+      subtitle: 'Get in touch with us for your digital transformation journey',
       description: 'Ready to start your project? Contact us today!',
-      cta: 'Get in Touch'
+      cta: 'Get in Touch',
+      letsTalk: 'Let\'s Talk',
+      name: 'Your Name',
+      email: 'Your Email',
+      message: 'Your Message',
+      send: 'Send Message',
+      sending: 'Sending...',
+      success: 'Thank you! We will contact you soon.',
+      workingHours: 'Working Hours',
+      weekdays: 'Monday - Friday',
+      weekends: 'Weekends',
+      byAppointment: 'By appointment'
     }
   },
   ru: {
@@ -200,8 +212,8 @@ export const translations: Record<Language, Translations> = {
           '4': 'Проектирование взаимодействия',
           '5': 'Тестирование удобства использования'
         }
-      },
-      consulting: {
+        },
+        consulting: {
         title: 'IT-Консалтинг',
         description: 'Экспертное руководство для вашей цифровой трансформации',
         features: {
@@ -271,8 +283,20 @@ export const translations: Record<Language, Translations> = {
     // Контакты
     contact: {
       title: 'Давайте Работать Вместе',
+      subtitle: 'Свяжитесь с нами для вашей цифровой трансформации',
       description: 'Готовы начать свой проект? Свяжитесь с нами сегодня!',
-      cta: 'Связаться с Нами'
+      cta: 'Связаться с Нами',
+      letsTalk: 'Давайте Обсудим',
+      name: 'Ваше Имя',
+      email: 'Ваш Email',
+      message: 'Ваше Сообщение',
+      send: 'Отправить',
+      sending: 'Отправка...',
+      success: 'Спасибо! Мы свяжемся с вами в ближайшее время.',
+      workingHours: 'Часы Работы',
+      weekdays: 'Понедельник - Пятница',
+      weekends: 'Выходные',
+      byAppointment: 'По договоренности'
     }
   },
   uk: {
@@ -333,8 +357,8 @@ export const translations: Record<Language, Translations> = {
           '4': 'Проектування взаємодії',
           '5': 'Тестування зручності використання'
         }
-      },
-      consulting: {
+        },
+        consulting: {
         title: 'IT-Консалтинг',
         description: 'Експертне керівництво для вашої цифрової трансформації',
         features: {
@@ -404,8 +428,20 @@ export const translations: Record<Language, Translations> = {
     // Контакты
     contact: {
       title: 'Давайте Працювати Разом',
+      subtitle: 'Зв\'яжіться з нами для вашої цифрової трансформації',
       description: 'Готові розпочати свій проект? Зв\'яжіться з нами сьогодні!',
-      cta: 'Зв\'язатися з Нами'
+      cta: 'Зв\'язатися з Нами',
+      letsTalk: 'Давайте Обговоримо',
+      name: 'Ваше Ім\'я',
+      email: 'Ваш Email',
+      message: 'Ваше Повідомлення',
+      send: 'Надіслати',
+      sending: 'Надсилання...',
+      success: 'Дякуємо! Ми зв\'яжемося з вами найближчим часом.',
+      workingHours: 'Години Роботи',
+      weekdays: 'Понеділок - П\'ятниця',
+      weekends: 'Вихідні',
+      byAppointment: 'За домовленістю'
     }
   }
 }

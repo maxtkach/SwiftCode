@@ -3,6 +3,7 @@
 import Navigation from '@/components/Navigation'
 import AnimatedElement from '@/components/AnimatedElement'
 import { useTranslation } from '@/hooks/useTranslation'
+import Link from 'next/link'
 
 export default function ServicesPage() {
   const t = useTranslation()
@@ -111,12 +112,12 @@ export default function ServicesPage() {
                       <span className="text-xl font-bold text-accent">
                         {service.price}
                       </span>
-                      <a
+                      <Link
                         href="/contact"
                         className="px-6 py-2 rounded-full bg-accent text-white font-medium hover:bg-primary transition-all shadow-lg shadow-accent/20 hover:shadow-accent/30"
                       >
                         {t('contact.cta')}
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -168,12 +169,12 @@ export default function ServicesPage() {
             <p className="text-xl text-text/70 mb-8">
               {t('contact.subtitle')}
             </p>
-            <a
+            <Link
               href="/contact"
               className="inline-block px-8 py-4 rounded-full bg-accent text-white font-medium hover:bg-primary transition-all shadow-lg shadow-accent/20 hover:shadow-accent/30"
             >
               {t('contact.cta')}
-            </a>
+            </Link>
           </AnimatedElement>
         </div>
       </section>
