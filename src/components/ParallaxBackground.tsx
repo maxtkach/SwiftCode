@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Image from 'next/image'
 
 export default function ParallaxBackground() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -39,9 +40,17 @@ export default function ParallaxBackground() {
       {/* Сетка */}
       <div 
         ref={el => { if (el) layersRef.current[0] = el }}
-        className="absolute inset-0 bg-[url('./grid.svg')] opacity-10"
+        className="absolute inset-0 opacity-10"
         style={{ transition: 'transform 0.1s ease-out' }}
-      />
+      >
+        <Image
+          src="grid.svg"
+          alt="Grid pattern"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
 
       {/* Градиентный фон */}
       <div 
