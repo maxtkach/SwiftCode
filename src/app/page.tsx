@@ -11,6 +11,7 @@ import { motion } from 'framer-motion'
 import ProjectGallery3D from '@/components/ProjectGallery3D'
 import Services from '@/components/Services'
 import { useTranslation } from '@/hooks/useTranslation'
+import Image from 'next/image'
 
 const projects = [
   {
@@ -51,9 +52,25 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
-        <div className="absolute inset-0 bg-[url('hero-bg.jpg')] bg-cover bg-center bg-no-repeat" />
+        <div className="absolute inset-0">
+          <Image
+            src="hero-bg.jpg"
+            alt="Hero background"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-transparent" />
-        <div className="absolute inset-0 bg-[url('grid.svg')] opacity-5" />
+        <div className="absolute inset-0">
+          <Image
+            src="grid.svg"
+            alt="Grid pattern"
+            fill
+            className="opacity-5"
+            priority
+          />
+        </div>
         
         <div className="container relative px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -216,7 +233,15 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <section className="py-12 sm:py-16 md:py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('grid.svg')] opacity-5" />
+        <div className="absolute inset-0">
+          <Image
+            src="grid.svg"
+            alt="Grid pattern"
+            fill
+            className="opacity-5"
+            priority
+          />
+        </div>
         <div className="container px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 md:mb-16">
             <AnimatedElement delay={0.2}>
