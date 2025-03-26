@@ -9,30 +9,26 @@ interface GradientTextProps {
 
 export default function GradientText({ text, className = '' }: GradientTextProps) {
   return (
-    <motion.div
-      className={`relative ${className}`}
+    <motion.span
+      className={`${className} bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-accent2 animate-gradient`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <span className="relative z-10">{text}</span>
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%]"
-        animate={{
-          backgroundPosition: ['0% 0%', '100% 0%', '0% 0%']
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-        style={{
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          filter: 'blur(8px)',
-          opacity: 0.5
-        }}
-      />
-    </motion.div>
+      {text.split(' ').map((word, index) => (
+        <motion.span
+          key={index}
+          className="inline-block"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+        >
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary animate-gradient">
+            {word}
+          </span>
+          {index < text.split(' ').length - 1 && ' '}
+        </motion.span>
+      ))}
+    </motion.span>
   )
 } 

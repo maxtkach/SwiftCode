@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useMemo } from 'react'
+import { useEffect, useRef } from 'react'
 
 interface Particle {
   x: number
@@ -15,20 +15,6 @@ export default function ParticleBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const particlesRef = useRef<Particle[]>([])
   const animationFrameRef = useRef<number>()
-  const lastTimeRef = useRef<number>(0)
-
-  // Мемоизируем создание частиц
-  const createParticles = useMemo(() => (width: number, height: number) => {
-    const particleCount = Math.min(Math.floor((width * height) / 15000), 100)
-    return Array.from({ length: particleCount }, () => ({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      size: 1 + Math.random() * 2,
-      speedX: (Math.random() - 0.5) * 0.5,
-      speedY: (Math.random() - 0.5) * 0.5,
-      opacity: 0.1 + Math.random() * 0.2
-    }))
-  }, [])
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -40,54 +26,72 @@ export default function ParticleBackground() {
     const resizeCanvas = () => {
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
-      particlesRef.current = createParticles(canvas.width, canvas.height)
     }
-    resizeCanvas()
-    window.addEventListener('resize', resizeCanvas)
 
-    const animate = (currentTime: number) => {
-      if (!lastTimeRef.current) lastTimeRef.current = currentTime
-      const deltaTime = currentTime - lastTimeRef.current
-      lastTimeRef.current = currentTime
+    const createParticles = () => {
+      const particles: Particle[] = []
+      const particleCount = Math.floor((canvas.width * canvas.height) / 10000)
 
-      // Очищаем canvas только если прошло достаточно времени
-      if (deltaTime > 16) { // примерно 60 FPS
-        ctx.clearRect(0, 0, canvas.width, canvas.height)
-        
-        particlesRef.current.forEach(particle => {
-          // Обновляем позицию с учетом deltaTime
-          particle.x += particle.speedX * (deltaTime / 16)
-          particle.y += particle.speedY * (deltaTime / 16)
-          
-          // Ограничиваем частицы в пределах экрана
-          if (particle.x < 0 || particle.x > canvas.width) particle.speedX *= -1
-          if (particle.y < 0 || particle.y > canvas.height) particle.speedY *= -1
-
-          // Рисуем частицу
-          ctx.beginPath()
-          ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
-          ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`
-          ctx.fill()
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          size: Math.random() * 2 + 1,
+          speedX: Math.random() * 0.5 - 0.25,
+          speedY: Math.random() * 0.5 - 0.25,
+          opacity: Math.random() * 0.5 + 0.2
         })
       }
 
+      return particles
+    }
+
+    const animate = () => {
+      if (!ctx || !canvas) return
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.1)'
+
+      particlesRef.current.forEach(particle => {
+        particle.x += particle.speedX
+        particle.y += particle.speedY
+
+        if (particle.x < 0) particle.x = canvas.width
+        if (particle.x > canvas.width) particle.x = 0
+        if (particle.y < 0) particle.y = canvas.height
+        if (particle.y > canvas.height) particle.y = 0
+
+        ctx.beginPath()
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
+        ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`
+        ctx.fill()
+      })
+
       animationFrameRef.current = requestAnimationFrame(animate)
     }
-    animate(0)
+
+    resizeCanvas()
+    particlesRef.current = createParticles()
+    animate()
+
+    window.addEventListener('resize', () => {
+      resizeCanvas()
+      particlesRef.current = createParticles()
+    })
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas)
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current)
       }
+      window.removeEventListener('resize', resizeCanvas)
     }
-  }, [createParticles])
+  }, [])
 
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-full h-full pointer-events-none z-0"
-      style={{ opacity: 0.3 }}
+      className="fixed inset-0 pointer-events-none z-0"
+      style={{ opacity: 0.5 }}
     />
   )
 } 

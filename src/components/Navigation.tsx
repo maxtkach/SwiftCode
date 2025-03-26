@@ -7,15 +7,15 @@ import LanguageSwitcher from './LanguageSwitcher'
 import { useTranslation } from '@/hooks/useTranslation'
 
 const servicesItems = [
-  { href: '/services#web', key: 'nav.webDev' },
-  { href: '/services#mobile', key: 'nav.mobileDev' },
-  { href: '/services#design', key: 'nav.design' }
+  { href: `${process.env.NODE_ENV === 'production' ? '/SwiftCode' : ''}/services#web`, key: 'nav.webDev' },
+  { href: `${process.env.NODE_ENV === 'production' ? '/SwiftCode' : ''}/services#mobile`, key: 'nav.mobileDev' },
+  { href: `${process.env.NODE_ENV === 'production' ? '/SwiftCode' : ''}/services#design`, key: 'nav.design' }
 ]
 
 const portfolioItems = [
-  { href: '/portfolio', key: 'nav.allProjects' },
-  { href: '/portfolio#web', key: 'nav.webProjects' },
-  { href: '/portfolio#mobile', key: 'nav.mobileProjects' }
+  { href: `${process.env.NODE_ENV === 'production' ? '/SwiftCode' : ''}/portfolio`, key: 'nav.allProjects' },
+  { href: `${process.env.NODE_ENV === 'production' ? '/SwiftCode' : ''}/portfolio#web`, key: 'nav.webProjects' },
+  { href: `${process.env.NODE_ENV === 'production' ? '/SwiftCode' : ''}/portfolio#mobile`, key: 'nav.mobileProjects' }
 ]
 
 export default function Navigation() {

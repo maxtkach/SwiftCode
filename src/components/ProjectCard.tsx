@@ -9,47 +9,58 @@ interface ProjectCardProps {
   description: string
   image: string
   category: string
-  technologies: string[]
-  client: string
-  delay?: number
+  technologies?: string[]
+  client?: string
 }
 
 export default function ProjectCard({ 
   title, 
   description, 
   image, 
-  category, 
+  category,
   technologies,
-  client,
-  delay = 0 
+  client 
 }: ProjectCardProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay }}
-        className="group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300"
-        onClick={() => setIsOpen(true)}
+        whileHover={{ scale: 1.05 }}
+        className="group relative overflow-hidden rounded-2xl bg-white/5 border border-primary/10 backdrop-blur-sm hover:bg-white/10 transition-all"
       >
-        <div className="relative h-64 overflow-hidden">
+        <div className="relative h-64">
           <Image
-            src={image}
+            src={`${process.env.NODE_ENV === 'production' ? '/SwiftCode' : ''}${image}`}
             alt={title}
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
+            className="object-cover transition-transform duration-300 group-hover:scale-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
         
         <div className="p-6">
-          <span className="inline-block px-3 py-1 text-sm font-semibold text-accent bg-accent/10 rounded-full mb-3">
-            {category}
-          </span>
-          <h3 className="text-xl font-bold text-primary mb-2">{title}</h3>
-          <p className="text-text/70 line-clamp-2">{description}</p>
+          <div className="text-sm text-primary mb-2">{category}</div>
+          <h3 className="text-xl font-semibold mb-2">{title}</h3>
+          <p className="text-text/70 mb-4">{description}</p>
+          
+          {technologies && (
+            <div className="flex flex-wrap gap-2 mb-4">
+              {technologies.map((tech, index) => (
+                <span 
+                  key={index}
+                  className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          )}
+          
+          {client && (
+            <div className="text-sm text-text/60">
+              Client: {client}
+            </div>
+          )}
         </div>
       </motion.div>
 
@@ -103,7 +114,7 @@ export default function ProjectCard({
                   <div>
                     <h4 className="font-semibold text-primary mb-2">Technologies</h4>
                     <div className="flex flex-wrap gap-2">
-                      {technologies.map((tech, index) => (
+                      {technologies?.map((tech, index) => (
                         <span
                           key={index}
                           className="px-3 py-1 text-sm bg-background rounded-full text-text/70"
