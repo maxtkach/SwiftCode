@@ -8,9 +8,9 @@ import Image from 'next/image'
 type Language = 'en' | 'ru' | 'uk'
 
 const languages: { code: Language; label: string; flag: string }[] = [
-  { code: 'en', label: 'English', flag: '/images/flags/gb.svg' },
-  { code: 'ru', label: 'Русский', flag: '/images/flags/ru.svg' },
-  { code: 'uk', label: 'Українська', flag: '/images/flags/ua.svg' }
+  { code: 'en', label: 'English', flag: './images/flags/gb.svg' },
+  { code: 'ru', label: 'Русский', flag: './images/flags/ru.svg' },
+  { code: 'uk', label: 'Українська', flag: './images/flags/ua.svg' }
 ]
 
 export default function LanguageSwitcher() {

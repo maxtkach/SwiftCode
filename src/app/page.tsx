@@ -16,25 +16,25 @@ const projects = [
   {
     title: "E-commerce Platform",
     description: "A modern online store with advanced features",
-    image: "/agency/projects/ecommerce.jpg",
+    image: "./projects/ecommerce.jpg",
     category: "Web Development"
   },
   {
     title: "Mobile App Design",
     description: "User-friendly interface for a fitness tracking app",
-    image: "/agency/projects/mobile-app.jpg",
+    image: "./projects/mobile-app.jpg",
     category: "UI/UX Design"
   },
   {
     title: "Corporate Website",
     description: "Modern and responsive website for a tech company",
-    image: "/agency/projects/corporate.jpg",
+    image: "./projects/corporate.jpg",
     category: "Web Development"
   },
   {
     title: "Brand Identity",
     description: "Complete brand identity design for a startup",
-    image: "/agency/projects/branding.jpg",
+    image: "./projects/branding.jpg",
     category: "Branding"
   }
 ]
@@ -51,9 +51,9 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
-        <div className="absolute inset-0 bg-[url('/agency/hero-bg.jpg')] bg-cover bg-center bg-no-repeat" />
+        <div className="absolute inset-0 bg-[url('./hero-bg.jpg')] bg-cover bg-center bg-no-repeat" />
         <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-transparent" />
-        <div className="absolute inset-0 bg-[url('/agency/grid.svg')] opacity-5" />
+        <div className="absolute inset-0 bg-[url('./grid.svg')] opacity-5" />
         
         <div className="container relative px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -85,7 +85,7 @@ export default function Home() {
                 className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center"
               >
                 <motion.a
-                  href="/agency/contact"
+                  href="/contact"
                   className="w-full sm:w-auto inline-block px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-primary text-white text-sm sm:text-base font-medium hover:bg-accent transition-all shadow-lg shadow-primary/20 hover:shadow-primary/30 hover:scale-105"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -93,7 +93,7 @@ export default function Home() {
                   {t('hero.cta')}
                 </motion.a>
                 <motion.a
-                  href="/agency#services"
+                  href="/#services"
                   className="w-full sm:w-auto inline-block px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-white text-primary text-sm sm:text-base font-medium hover:bg-accent hover:text-white transition-all shadow-lg shadow-white/20 hover:shadow-accent/30 hover:scale-105"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -216,7 +216,7 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <section className="py-12 sm:py-16 md:py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/agency/grid.svg')] opacity-5" />
+        <div className="absolute inset-0 bg-[url('./grid.svg')] opacity-5" />
         <div className="container px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 md:mb-16">
             <AnimatedElement delay={0.2}>
@@ -353,7 +353,7 @@ export default function Home() {
 
             <AnimatedElement delay={0.6}>
               <motion.a
-                href="/agency/contact"
+                href="/contact"
                 className="inline-block px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-primary text-white text-sm sm:text-base font-medium hover:bg-accent transition-all shadow-lg shadow-primary/20 hover:shadow-primary/30 hover:scale-105"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

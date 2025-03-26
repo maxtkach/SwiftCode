@@ -7,15 +7,15 @@ import LanguageSwitcher from './LanguageSwitcher'
 import { useTranslation } from '@/hooks/useTranslation'
 
 const servicesItems = [
-  { href: '/agency/services#web', key: 'nav.webDev' },
-  { href: '/agency/services#mobile', key: 'nav.mobileDev' },
-  { href: '/agency/services#design', key: 'nav.design' }
+  { href: '/services#web', key: 'nav.webDev' },
+  { href: '/services#mobile', key: 'nav.mobileDev' },
+  { href: '/services#design', key: 'nav.design' }
 ]
 
 const portfolioItems = [
-  { href: '/agency/portfolio', key: 'nav.allProjects' },
-  { href: '/agency/portfolio#web', key: 'nav.webProjects' },
-  { href: '/agency/portfolio#mobile', key: 'nav.mobileProjects' }
+  { href: '/portfolio', key: 'nav.allProjects' },
+  { href: '/portfolio#web', key: 'nav.webProjects' },
+  { href: '/portfolio#mobile', key: 'nav.mobileProjects' }
 ]
 
 export default function Navigation() {
@@ -44,7 +44,7 @@ export default function Navigation() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Логотип */}
-          <Link href="/agency" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               SwiftCode
             </span>
@@ -52,7 +52,7 @@ export default function Navigation() {
 
           {/* Десктопное меню */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/agency" className="text-text/70 hover:text-accent transition-colors">
+            <Link href="/" className="text-text/70 hover:text-accent transition-colors">
               {t('nav.home')}
             </Link>
 
@@ -178,7 +178,7 @@ export default function Navigation() {
               className="md:hidden overflow-hidden"
             >
               <div className="py-4 space-y-4">
-                <Link href="/agency" className="block text-text hover:text-primary transition-colors">
+                <Link href="/" className="block text-text hover:text-primary transition-colors">
                   {t('nav.home')}
                 </Link>
                 

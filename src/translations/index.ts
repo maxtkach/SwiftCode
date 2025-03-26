@@ -25,26 +25,26 @@ export const translations: Record<Language, Translations> = {
     },
 
     // Главная страница
-    hero: {
-      title: 'We Create Digital Solutions',
-      subtitle: 'Web Development • Mobile Apps • UI/UX Design',
-      cta: 'Start Project'
-    },
+      hero: {
+        title: 'We Create Digital Solutions',
+        subtitle: 'Web Development • Mobile Apps • UI/UX Design',
+        cta: 'Start Project'
+      },
 
     // Сервисы
-    services: {
-      title: 'Our Services',
+      services: {
+        title: 'Our Services',
       subtitle: 'We offer comprehensive web development solutions',
-      web: {
-        title: 'Web Development',
+        web: {
+          title: 'Web Development',
         description: 'Custom web applications and websites'
-      },
-      mobile: {
-        title: 'Mobile Development',
+        },
+        mobile: {
+          title: 'Mobile Development',
         description: 'Native and cross-platform mobile apps'
-      },
-      design: {
-        title: 'UI/UX Design',
+        },
+        design: {
+          title: 'UI/UX Design',
         description: 'User-centered design solutions'
       }
     },
@@ -57,24 +57,24 @@ export const translations: Record<Language, Translations> = {
     },
 
     // Процесс
-    process: {
-      title: 'Our Process',
+      process: {
+        title: 'Our Process',
       subtitle: 'How we bring your ideas to life',
-      steps: {
-        discovery: {
-          title: 'Discovery',
+        steps: {
+          discovery: {
+            title: 'Discovery',
           description: 'Understanding your needs and goals'
-        },
-        design: {
-          title: 'Design',
+          },
+          design: {
+            title: 'Design',
           description: 'Creating beautiful and functional designs'
-        },
-        development: {
-          title: 'Development',
+          },
+          development: {
+            title: 'Development',
           description: 'Building robust and scalable solutions'
-        },
-        delivery: {
-          title: 'Delivery',
+          },
+          delivery: {
+            title: 'Delivery',
           description: 'Testing and launching your project'
         }
       }
@@ -126,26 +126,26 @@ export const translations: Record<Language, Translations> = {
     },
 
     // Главная страница
-    hero: {
+      hero: {
       title: 'Мы Создаем Цифровые Решения',
-      subtitle: 'Веб-разработка • Мобильные приложения • UI/UX дизайн',
-      cta: 'Начать Проект'
-    },
+        subtitle: 'Веб-разработка • Мобильные приложения • UI/UX дизайн',
+        cta: 'Начать Проект'
+      },
 
     // Сервисы
-    services: {
-      title: 'Наши Услуги',
+      services: {
+        title: 'Наши Услуги',
       subtitle: 'Мы предлагаем комплексные решения для веб-разработки',
-      web: {
+        web: {
         title: 'Веб-Разработка',
         description: 'Веб-приложения и сайты'
-      },
-      mobile: {
-        title: 'Мобильная Разработка',
+        },
+        mobile: {
+          title: 'Мобильная Разработка',
         description: 'Нативные и кроссплатформенные приложения'
-      },
-      design: {
-        title: 'UI/UX Дизайн',
+        },
+        design: {
+          title: 'UI/UX Дизайн',
         description: 'Дизайн, ориентированный на пользователя'
       }
     },
@@ -158,24 +158,24 @@ export const translations: Record<Language, Translations> = {
     },
 
     // Процесс
-    process: {
-      title: 'Наш Процесс',
+      process: {
+        title: 'Наш Процесс',
       subtitle: 'Как мы воплощаем ваши идеи в жизнь',
-      steps: {
-        discovery: {
-          title: 'Анализ',
+        steps: {
+          discovery: {
+            title: 'Анализ',
           description: 'Изучение ваших потребностей и целей'
-        },
-        design: {
-          title: 'Дизайн',
+          },
+          design: {
+            title: 'Дизайн',
           description: 'Создание красивых и функциональных решений'
-        },
-        development: {
-          title: 'Разработка',
+          },
+          development: {
+            title: 'Разработка',
           description: 'Создание надежных и масштабируемых решений'
-        },
-        delivery: {
-          title: 'Запуск',
+          },
+          delivery: {
+            title: 'Запуск',
           description: 'Тестирование и запуск вашего проекта'
         }
       }
@@ -227,26 +227,26 @@ export const translations: Record<Language, Translations> = {
     },
 
     // Главная страница
-    hero: {
+      hero: {
       title: 'Ми Створюємо Цифрові Рішення',
-      subtitle: 'Веб-розробка • Мобільні додатки • UI/UX дизайн',
-      cta: 'Розпочати Проект'
-    },
+        subtitle: 'Веб-розробка • Мобільні додатки • UI/UX дизайн',
+        cta: 'Розпочати Проект'
+      },
 
     // Сервисы
-    services: {
-      title: 'Наші Послуги',
+      services: {
+        title: 'Наші Послуги',
       subtitle: 'Ми пропонуємо комплексні рішення для веб-розробки',
-      web: {
+        web: {
         title: 'Веб-Розробка',
         description: 'Веб-додатки та сайти'
-      },
-      mobile: {
-        title: 'Мобільна Розробка',
+        },
+        mobile: {
+          title: 'Мобільна Розробка',
         description: 'Нативні та крос-платформні додатки'
-      },
-      design: {
-        title: 'UI/UX Дизайн',
+        },
+        design: {
+          title: 'UI/UX Дизайн',
         description: 'Дизайн, орієнтований на користувача'
       }
     },
@@ -259,24 +259,24 @@ export const translations: Record<Language, Translations> = {
     },
 
     // Процесс
-    process: {
-      title: 'Наш Процес',
+      process: {
+        title: 'Наш Процес',
       subtitle: 'Як ми втілюємо ваші ідеї в життя',
-      steps: {
-        discovery: {
-          title: 'Аналіз',
+        steps: {
+          discovery: {
+            title: 'Аналіз',
           description: 'Вивчення ваших потреб та цілей'
-        },
-        design: {
-          title: 'Дизайн',
+          },
+          design: {
+            title: 'Дизайн',
           description: 'Створення красивих та функціональних рішень'
-        },
-        development: {
-          title: 'Розробка',
+          },
+          development: {
+            title: 'Розробка',
           description: 'Створення надійних та масштабованих рішень'
-        },
-        delivery: {
-          title: 'Запуск',
+          },
+          delivery: {
+            title: 'Запуск',
           description: 'Тестування та запуск вашого проекту'
         }
       }

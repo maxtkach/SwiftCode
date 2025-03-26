@@ -39,7 +39,7 @@ export default function ParallaxBackground() {
       {/* Сетка */}
       <div 
         ref={el => { if (el) layersRef.current[0] = el }}
-        className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"
+        className="absolute inset-0 bg-[url('./grid.svg')] opacity-10"
         style={{ transition: 'transform 0.1s ease-out' }}
       />
 
