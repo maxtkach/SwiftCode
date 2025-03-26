@@ -45,7 +45,25 @@ export const translations: Record<Language, Translations> = {
         },
         design: {
           title: 'UI/UX Design',
-        description: 'User-centered design solutions'
+        description: 'User-centered design solutions',
+        features: {
+          '1': 'User Research & Analysis',
+          '2': 'Wireframing & Prototyping',
+          '3': 'Visual Design & Branding',
+          '4': 'Interaction Design',
+          '5': 'Usability Testing'
+        }
+      },
+      consulting: {
+        title: 'IT Consulting',
+        description: 'Expert guidance for your digital transformation',
+        features: {
+          '1': 'Technology Stack Selection',
+          '2': 'Architecture Planning',
+          '3': 'Performance Optimization',
+          '4': 'Security Assessment',
+          '5': 'Scalability Planning'
+        }
       }
     },
 
@@ -146,7 +164,25 @@ export const translations: Record<Language, Translations> = {
         },
         design: {
           title: 'UI/UX Дизайн',
-        description: 'Дизайн, ориентированный на пользователя'
+        description: 'Дизайн, ориентированный на пользователя',
+        features: {
+          '1': 'Исследование и анализ пользователей',
+          '2': 'Создание макетов и прототипов',
+          '3': 'Визуальный дизайн и брендинг',
+          '4': 'Проектирование взаимодействия',
+          '5': 'Тестирование удобства использования'
+        }
+      },
+      consulting: {
+        title: 'IT-Консалтинг',
+        description: 'Экспертное руководство для вашей цифровой трансформации',
+        features: {
+          '1': 'Выбор технологического стека',
+          '2': 'Планирование архитектуры',
+          '3': 'Оптимизация производительности',
+          '4': 'Оценка безопасности',
+          '5': 'Планирование масштабируемости'
+        }
       }
     },
 
@@ -247,7 +283,25 @@ export const translations: Record<Language, Translations> = {
         },
         design: {
           title: 'UI/UX Дизайн',
-        description: 'Дизайн, орієнтований на користувача'
+        description: 'Дизайн, орієнтований на користувача',
+        features: {
+          '1': 'Дослідження та аналіз користувачів',
+          '2': 'Створення макетів та прототипів',
+          '3': 'Візуальний дизайн та брендинг',
+          '4': 'Проектування взаємодії',
+          '5': 'Тестування зручності використання'
+        }
+      },
+      consulting: {
+        title: 'IT-Консалтинг',
+        description: 'Експертне керівництво для вашої цифрової трансформації',
+        features: {
+          '1': 'Вибір технологічного стеку',
+          '2': 'Планування архітектури',
+          '3': 'Оптимізація продуктивності',
+          '4': 'Оцінка безпеки',
+          '5': 'Планування масштабованості'
+        }
       }
     },
 
