@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   output: "export",
-  basePath: process.env.NODE_ENV === 'production' ? '/agency' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/SwiftCode' : '',
   images: {
     unoptimized: true,
   },
