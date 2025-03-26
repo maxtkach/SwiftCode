@@ -37,11 +37,25 @@ export const translations: Record<Language, Translations> = {
       subtitle: 'We offer comprehensive web development solutions',
         web: {
           title: 'Web Development',
-        description: 'Custom web applications and websites'
+        description: 'Custom web applications and websites',
+        features: {
+          '1': 'Custom Web Applications',
+          '2': 'E-commerce Solutions',
+          '3': 'CMS Development',
+          '4': 'API Integration',
+          '5': 'Performance Optimization'
+        }
         },
         mobile: {
           title: 'Mobile Development',
-        description: 'Native and cross-platform mobile apps'
+        description: 'Native and cross-platform mobile apps',
+        features: {
+          '1': 'iOS & Android Apps',
+          '2': 'Cross-platform Solutions',
+          '3': 'App Store Publishing',
+          '4': 'Push Notifications',
+          '5': 'Offline Functionality'
+        }
         },
         design: {
           title: 'UI/UX Design',
@@ -156,11 +170,25 @@ export const translations: Record<Language, Translations> = {
       subtitle: 'Мы предлагаем комплексные решения для веб-разработки',
         web: {
         title: 'Веб-Разработка',
-        description: 'Веб-приложения и сайты'
+        description: 'Веб-приложения и сайты',
+        features: {
+          '1': 'Веб-приложения под заказ',
+          '2': 'Интернет-магазины',
+          '3': 'Разработка CMS',
+          '4': 'Интеграция API',
+          '5': 'Оптимизация производительности'
+        }
         },
         mobile: {
           title: 'Мобильная Разработка',
-        description: 'Нативные и кроссплатформенные приложения'
+        description: 'Нативные и кроссплатформенные приложения',
+        features: {
+          '1': 'Приложения для iOS и Android',
+          '2': 'Кроссплатформенные решения',
+          '3': 'Публикация в App Store',
+          '4': 'Push-уведомления',
+          '5': 'Офлайн-функциональность'
+        }
         },
         design: {
           title: 'UI/UX Дизайн',
@@ -275,11 +303,25 @@ export const translations: Record<Language, Translations> = {
       subtitle: 'Ми пропонуємо комплексні рішення для веб-розробки',
         web: {
         title: 'Веб-Розробка',
-        description: 'Веб-додатки та сайти'
+        description: 'Веб-додатки та сайти',
+        features: {
+          '1': 'Веб-додатки під замовлення',
+          '2': 'Інтернет-магазини',
+          '3': 'Розробка CMS',
+          '4': 'Інтеграція API',
+          '5': 'Оптимізація продуктивності'
+        }
         },
         mobile: {
           title: 'Мобільна Розробка',
-        description: 'Нативні та крос-платформні додатки'
+        description: 'Нативні та крос-платформні додатки',
+        features: {
+          '1': 'Додатки для iOS та Android',
+          '2': 'Крос-платформні рішення',
+          '3': 'Публікація в App Store',
+          '4': 'Push-сповіщення',
+          '5': 'Офлайн-функціональність'
+        }
         },
         design: {
           title: 'UI/UX Дизайн',
