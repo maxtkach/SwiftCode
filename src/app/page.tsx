@@ -54,7 +54,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
         <div className="absolute inset-0">
           <Image
-            src="hero-bg.jpg"
+            src="/hero-bg.jpg"
             alt="Hero background"
             fill
             className="object-cover"
@@ -64,7 +64,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-transparent" />
         <div className="absolute inset-0">
           <Image
-            src="grid.svg"
+            src="/grid.svg"
             alt="Grid pattern"
             fill
             className="opacity-5"
@@ -235,7 +235,7 @@ export default function Home() {
       <section className="py-12 sm:py-16 md:py-20 relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="grid.svg"
+            src="/grid.svg"
             alt="Grid pattern"
             fill
             className="opacity-5"

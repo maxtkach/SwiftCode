@@ -44,7 +44,7 @@ export default function ParallaxBackground() {
         style={{ transition: 'transform 0.1s ease-out' }}
       >
         <Image
-          src="grid.svg"
+          src="/grid.svg"
           alt="Grid pattern"
           fill
           className="object-cover"
