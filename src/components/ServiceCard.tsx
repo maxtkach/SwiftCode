@@ -39,8 +39,8 @@ export default function ServiceCard({ title, description, price, features, delay
           ))}
         </ul>
 
-        <Link 
-          href="/contact" 
+        <Link
+          href={`${process.env.NODE_ENV === 'production' ? '/SwiftCode' : ''}/contact`}
           className="btn-primary relative group overflow-hidden w-full text-center block"
         >
           <span className="relative z-10">Get Started</span>

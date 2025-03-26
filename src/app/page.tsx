@@ -12,6 +12,7 @@ import ProjectGallery3D from '@/components/ProjectGallery3D'
 import Services from '@/components/Services'
 import { useTranslation } from '@/hooks/useTranslation'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const projects = [
   {
@@ -101,22 +102,22 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center"
               >
-                <motion.a
-                  href="/contact"
-                  className="w-full sm:w-auto inline-block px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-primary text-white text-sm sm:text-base font-medium hover:bg-accent transition-all shadow-lg shadow-primary/20 hover:shadow-primary/30 hover:scale-105"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {t('hero.cta')}
-                </motion.a>
-                <motion.a
-                  href="/#services"
-                  className="w-full sm:w-auto inline-block px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-white text-primary text-sm sm:text-base font-medium hover:bg-accent hover:text-white transition-all shadow-lg shadow-white/20 hover:shadow-accent/30 hover:scale-105"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {t('nav.services')}
-                </motion.a>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link
+                    href={`${process.env.NODE_ENV === 'production' ? '/SwiftCode' : ''}/contact`}
+                    className="w-full sm:w-auto inline-block px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-primary text-white text-sm sm:text-base font-medium hover:bg-accent transition-all shadow-lg shadow-primary/20 hover:shadow-primary/30 hover:scale-105"
+                  >
+                    {t('hero.cta')}
+                  </Link>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link
+                    href={`${process.env.NODE_ENV === 'production' ? '/SwiftCode' : ''}/#services`}
+                    className="w-full sm:w-auto inline-block px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-white text-primary text-sm sm:text-base font-medium hover:bg-accent hover:text-white transition-all shadow-lg shadow-white/20 hover:shadow-accent/30 hover:scale-105"
+                  >
+                    {t('nav.services')}
+                  </Link>
+                </motion.div>
               </motion.div>
             </AnimatedElement>
 
@@ -376,16 +377,14 @@ export default function Home() {
               </p>
             </AnimatedElement>
 
-            <AnimatedElement delay={0.6}>
-              <motion.a
-                href="/contact"
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                href={`${process.env.NODE_ENV === 'production' ? '/SwiftCode' : ''}/contact`}
                 className="inline-block px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-primary text-white text-sm sm:text-base font-medium hover:bg-accent transition-all shadow-lg shadow-primary/20 hover:shadow-primary/30 hover:scale-105"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 {t('contact.cta')}
-              </motion.a>
-            </AnimatedElement>
+              </Link>
+            </motion.div>
           </div>
         </div>
       </section>
