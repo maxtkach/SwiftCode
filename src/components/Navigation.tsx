@@ -175,47 +175,45 @@ export default function Navigation() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden overflow-hidden fixed top-[72px] left-0 right-0 bg-background/95 backdrop-blur-lg shadow-lg border-t border-accent/10"
+              className="md:hidden overflow-hidden"
             >
-              <div className="container mx-auto">
-                <div className="py-4 space-y-4">
-                  <Link href="/" className="block text-text hover:text-primary transition-colors">
-                    {t('nav.home')}
-                  </Link>
-                  
-                  <div className="space-y-2">
-                    <div className="font-medium text-text/70">{t('nav.services')}</div>
-                    {servicesItems.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="block pl-4 text-text/70 hover:text-primary transition-colors"
-                      >
-                        {t(item.key)}
-                      </Link>
-                    ))}
-                  </div>
+              <div className="py-4 space-y-4">
+                <Link href="/" className="block text-text hover:text-primary transition-colors">
+                  {t('nav.home')}
+                </Link>
+                
+                <div className="space-y-2">
+                  <div className="font-medium text-text/70">{t('nav.services')}</div>
+                  {servicesItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block pl-4 text-text/70 hover:text-primary transition-colors"
+                    >
+                      {t(item.key)}
+                    </Link>
+                  ))}
+                </div>
 
-                  <div className="space-y-2">
-                    <div className="font-medium text-text/70">{t('nav.portfolio')}</div>
-                    {portfolioItems.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="block pl-4 text-text/70 hover:text-primary transition-colors"
-                      >
-                        {t(item.key)}
-                      </Link>
-                    ))}
-                  </div>
+                <div className="space-y-2">
+                  <div className="font-medium text-text/70">{t('nav.portfolio')}</div>
+                  {portfolioItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block pl-4 text-text/70 hover:text-primary transition-colors"
+                    >
+                      {t(item.key)}
+                    </Link>
+                  ))}
+                </div>
 
-                  <Link href="/contact" className="block text-text hover:text-primary transition-colors">
-                    {t('nav.contact')}
-                  </Link>
+                <Link href="/contact" className="block text-text hover:text-primary transition-colors">
+                  {t('nav.contact')}
+                </Link>
 
-                  <div className="pt-4 border-t border-accent/10">
-                    <LanguageSwitcher />
-                  </div>
+                <div className="pt-4">
+                  <LanguageSwitcher />
                 </div>
               </div>
             </motion.div>
